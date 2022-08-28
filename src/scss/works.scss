@@ -1,0 +1,110 @@
+.works {
+    &__inner {
+        padding-top: 72px;
+        color: #000;
+        margin-bottom: 110px;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: rem(44);
+        line-height: rem(36);
+        text-align: center;
+        letter-spacing: 0.1px;
+        margin-bottom: 60px;
+    }
+}
+
+.works-item {
+    &__inner {
+        display: flex;
+        padding: 40px 0;
+    }
+    &__content {
+        flex-basis: 57.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    &__image {
+        position: relative;
+        flex-basis: 42.5%;
+    }
+    &__img {
+        filter: drop-shadow(40px 30px 30px rgba(46, 4, 4, 0.18));
+        left: 0;
+        top: 0;
+        width: 266px;
+        height: 525px;
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: rem(24);
+        line-height: rem(36);
+        letter-spacing: 0.1px;
+        color: $primaryColor;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: rem(40);
+        line-height: rem(57);
+        letter-spacing: 0.2px;
+        color: $secondaryColor;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: rem(24);
+        line-height: rem(38);
+        letter-spacing: 0.2px;
+        color: #737373;
+    }
+    &:nth-child(2) {
+        .works-item__content {
+            order: 1;
+        }
+        .works-item__title {
+            max-width: 500px;
+        }
+        .works-item__image {
+            order: 2;
+        }
+        .works-item__img {
+            display: block;
+            margin-left: auto;
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .works {
+        &__inner {
+            margin-bottom: 40px;
+        }
+    }
+    .works-item {
+        &:nth-child(2) {
+            .works-item__image {
+                order: 0;
+            }
+        }
+        &__inner {
+            align-items: center;
+            flex-direction: column;
+        }
+        &__img {
+            position: relative;
+        }
+        &__content {
+            margin-top: 60px;
+        }
+        &__title {
+            font-size: rem(28);
+            line-height: rem(50);
+        }
+    }
+}

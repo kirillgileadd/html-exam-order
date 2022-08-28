@@ -1,0 +1,73 @@
+.contact {
+    color: $secondaryColor;
+    &__inner {
+        padding: 81px 0;
+        text-align: center;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: rem(40);
+        line-height: rem(57);
+        letter-spacing: 0.2px;
+        margin-bottom: 16px;
+    }
+    &__subtitle {
+        font-weight: 500;
+        font-size: rem(24);
+        letter-spacing: 0.2px;
+    }
+
+    &__form {
+        padding-top: 40px;
+        display: grid;
+        row-gap: 40px;
+        column-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: max-content;
+        grid-template-areas:
+            "inputName inputEmail"
+            "textarea textarea"
+            "button button";
+    }
+
+    &__input {
+        &:first-child {
+            grid-area: inputName;
+        }
+        &:last-child {
+            grid-area: inputEmail;
+        }
+    }
+
+    &__textarea {
+        grid-area: textarea;
+        max-height: 123px;
+    }
+    &__button {
+        color: $mainColor;
+        justify-self: center;
+        grid-area: button;
+    }
+}
+
+@media (max-width: $mobile) {
+    .contact {
+        &__form {
+            column-gap: 0;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "inputName inputName"
+                "inputEmail inputEmail"
+                "textarea textarea"
+                "button button";
+        }
+        &__textarea {
+            max-height: 285px;
+        }
+        &__title {
+            font-size: rem(36);
+            line-height: rem(50);
+            margin-bottom: 23px;
+        }
+    }
+}

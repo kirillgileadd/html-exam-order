@@ -1,0 +1,120 @@
+$imageTop: -178px;
+
+.top {
+    &__inner {
+        background-image: url("@img/header-bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+        padding: 74px 0 146px 0;
+    }
+    &__tag {
+        font-weight: 700;
+        font-size: rem(24);
+        line-height: rem(36);
+        letter-spacing: 0.1px;
+        color: #f7f7f7;
+    }
+    &__title {
+        max-height: 1005px;
+        font-weight: 700;
+        font-size: rem(58);
+        line-height: rem(80);
+        text-align: center;
+        letter-spacing: 0.2px;
+        margin-bottom: 17px;
+    }
+    &__subtitle {
+        font-weight: 500;
+        font-size: rem(24);
+        line-height: rem(38);
+        text-align: center;
+        letter-spacing: 0.2px;
+        color: #f7f7f7;
+        margin-bottom: 54px;
+    }
+    &__buttons {
+        margin: 0 auto;
+        justify-content: center;
+        display: flex;
+        column-gap: 40px;
+    }
+    &__image-box {
+        position: relative;
+        height: calc(570px);
+        &::after {
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #e4e4e4;
+            bottom: 0;
+            max-width: 884px;
+        }
+    }
+
+    &__image {
+        height: 750px;
+        width: 677px;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        top: $imageTop;
+        left: 47px;
+    }
+}
+@media (max-width: $mobile) {
+    .top {
+        &__buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 30px;
+        }
+        &__image-box {
+            position: relative;
+            padding: 0 0 112% 0;
+        }
+
+        &__image {
+            position: absolute;
+            left: 20px;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media (max-width: $mobileSmall) {
+    .top {
+        &__tag {
+            margin-bottom: 26px;
+        }
+        &__title {
+            font-size: rem(34);
+            line-height: rem(40);
+            margin-bottom: 54px;
+        }
+        &__image-box {
+            height: auto;
+            position: relative;
+            padding: 0 0 112% 0;
+            // width: calc(100% - 2vw);
+        }
+        &__image {
+            position: absolute;
+            left: 20px;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

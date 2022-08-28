@@ -1,0 +1,48 @@
+.download {
+    background-image: url("@img/download-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    &__inner {
+        padding: 130px 0 101px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: rem(40);
+        line-height: rem(57);
+        letter-spacing: 0.2px;
+        color: #ffffff;
+        margin-bottom: 15px;
+    }
+    &__subtitle {
+        font-weight: 500;
+        font-size: rem(24);
+        line-height: rem(38);
+        letter-spacing: 0.2px;
+        color: #ffffff;
+        margin-bottom: 84px;
+    }
+    &__buttons {
+        display: flex;
+        column-gap: 40px;
+    }
+}
+
+@media (max-width: $mobile) {
+    .download {
+        &__buttons {
+            flex-direction: column;
+            row-gap: 30px;
+        }
+        &__title {
+            font-size: rem(30);
+            line-height: rem(36);
+            margin-bottom: 35px;
+        }
+    }
+}
